@@ -1,17 +1,22 @@
 import coffee from "./coffee.jpg";
 import milkTea from "./milk-tea.jpg";
 import star from "./star.png";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import Modal from "./Modal";
 
 const Drinks = () => {
+  const { t } = useTranslation();
+  const [show, setShow] = useState(false);
+
   return (
     <div className="drinks">
-      <h3>Drinks</h3>
-      <div className="grid-container">
+      <h3>{t("Drinks")}</h3>
+      <div className="grid-container-food">
         <div>
-          <a href="/">
             <img src={coffee} alt="coffee" />
             <div className="food-info">
-              <h3>Coffee</h3>
+              <h3>{t("Coffee")}</h3>
               <div>
                 <div>
                   <p>
@@ -28,19 +33,19 @@ const Drinks = () => {
                 </div>
               </div>
               <div>
-                <p>Base price</p>
+                <p>{t("BasePrice")}</p>
                 <p>2.00 USD</p>
               </div>
             </div>
-            <div className="add-to-cart">Add to cart</div>
-          </a>
+            <button className="add-to-cart" onClick={() => setShow(true)}>
+              {t("AddToCart")}
+            </button>
         </div>
 
         <div>
-          <a href="/">
             <img src={milkTea} alt="milk-tea" />
             <div className="food-info">
-              <h3>Milk tea</h3>
+              <h3>{t("MilkTea")}</h3>
               <div>
                 <div>
                   <p>
@@ -57,14 +62,16 @@ const Drinks = () => {
                 </div>
               </div>
               <div>
-                <p>Base price</p>
+                <p>{t("BasePrice")}</p>
                 <p>2.25 USD</p>
               </div>
             </div>
-          </a>
-          <div className="add-to-cart">Add to cart</div>
+                      <button className="add-to-cart" onClick={() => setShow(true)}>
+              {t("AddToCart")}
+            </button>
         </div>
       </div>
+      <Modal onClose={() => setShow(false)} show={show}/>
     </div>
   );
 };

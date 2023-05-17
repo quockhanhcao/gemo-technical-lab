@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Drinks from "./Drinks";
 import Slider from "./Slider";
 import Foods from "./Foods";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Slider />
       <Drinks />
       <Foods />
+      <Footer></Footer>
     </div>
   );
 }

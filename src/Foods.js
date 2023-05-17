@@ -1,16 +1,20 @@
 import sandwich from "./sandwich.jpg";
 import bagel from "./bagels.jpg";
 import star from "./star.png";
+import { useTranslation } from "react-i18next";
+
 const Foods = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className="drinks">
-      <h3>Breakfast</h3>
-      <div className="grid-container">
+    <div className="foods">
+      <h3>{t("Breakfast")}</h3>
+      <div className="grid-container-food">
         <div>
           <a href="/">
             <img src={sandwich} alt="sandwich" />
             <div className="food-info">
-              <h3>Sandwich</h3>
+              <h3>{t("Sandwich")}</h3>
               <div>
                 <div>
                   <p>
@@ -27,11 +31,11 @@ const Foods = () => {
                 </div>
               </div>
               <div>
-                <p>Base price</p>
+                <p>{t("BasePrice")}</p>
                 <p>3.00 USD</p>
               </div>
             </div>
-            <div className="add-to-cart">Add to cart</div>
+            <button className="add-to-cart">{t("AddToCart")}</button>
           </a>
         </div>
 
@@ -39,7 +43,7 @@ const Foods = () => {
           <a href="/">
             <img src={bagel} alt="bagel" />
             <div className="food-info">
-              <h3>Bagel</h3>
+              <h3>{t("Bagel")}</h3>
               <div>
                 <div>
                   <p>
@@ -56,11 +60,11 @@ const Foods = () => {
                 </div>
               </div>
               <div>
-                <p>Base price</p>
+                <p>{t("BasePrice")}</p>
                 <p>3.00 USD</p>
               </div>
             </div>
-            <div className="add-to-cart">Add to cart</div>
+            <button className="add-to-cart">{t("AddToCart")}</button>
           </a>
         </div>
       </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 /* base styles */
 * {
@@ -8,7 +8,45 @@
   text-decoration: none;
 }
 
-.navbar  {
+/* CSS */
+.button-42 {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #4db971, #417f56);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 30px;
+  line-height: 30px;
+  outline: 0;
+  overflow: hidden;
+  /* padding: 0 20px; */
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 40px;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow .2s;
+  margin-left: 10px;
+}
+
+.button-42:hover {
+  box-shadow: rgba(65, 127, 86, 0.5) 0 3px 8px;
+}
+
+.App {
+  min-height: 100%;
+}
+
+.navbar {
   padding: 20px;
   display: flex;
   align-items: center;
@@ -28,8 +66,7 @@
 }
 
 .navbar h1 {
-  color: #417F56;
-
+  color: #417f56;
 }
 
 .navbar .links {
@@ -43,14 +80,18 @@
 }
 
 .navbar a:hover {
-  color: #417F56;
+  color: #417f56;
 }
 
-.drinks > h3 {
+.drinks > h3, .foods > h3 {
   margin: 30px;
 }
 
-.grid-container {
+.foods {
+  margin-bottom: 300px;
+}
+
+.grid-container-food {
   display: grid;
   max-width: 900px;
   margin: 0 auto;
@@ -58,18 +99,18 @@
   gap: 10px;
 }
 
-.grid-container > div {
+.grid-container-food > div {
   text-align: center;
   padding: 20px;
   border: 0.5px solid #e0dcdc;
   border-radius: 5px;
 }
 
-.grid-container div {
+.grid-container-food div {
   text-align: center;
 }
 
-.grid-container > div img {
+.grid-container-food > div img {
   max-width: 100%;
   max-height: 100%;
 }
@@ -96,10 +137,90 @@
 }
 
 .add-to-cart {
-  background-color: #417F56;
+  background-color: #417f56;
   font-size: 20px;
   color: white;
   font-weight: bold;
   padding: 10px;
   border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+}
+
+.footer {
+  height: 200px;
+  /* position: relative; */
+  margin-top: -200px;
+}
+
+.grid-container-footer {
+  margin-top: 50px;
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  border-top: 1px solid #f2f2f2;
+  padding: 20px 80px 20px 80px;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.grid-container-footer * {
+  color: white;
+}
+
+.grid-container-footer ul {
+  list-style-type: none;
+  align-items: center;
+}
+
+.grid-container-footer #footer-intro {
+  text-align: left;
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.footer-links {
+  text-align: center;
+}
+
+.footer-links ul {
+  display: inline-block;
+  text-align: left;
+  padding-left: 0;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  width: 500px;
+  background-color: #fff;
+}
+
+.modal-header, .modal-footer {
+  padding: 10px;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.modal-body {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
