@@ -1,4 +1,4 @@
-import shopName from "./shop-name-footer.png";
+import shopName from "../assets/logo/shop-name-footer.png";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {

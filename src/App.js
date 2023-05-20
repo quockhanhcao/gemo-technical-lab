@@ -1,9 +1,8 @@
 import "./App.css";
-import Navbar from "./Navbar";
-import Drinks from "./Drinks";
-import Slider from "./Slider";
-import Foods from "./Foods";
-import Footer from "./Footer";
+import Navbar from "./Navbar/Navbar";
+import Drinks from "./Food/Drinks";
+import Slider from "./Slider/Slider";
+import Footer from "./Footer/Footer";
 
 function App() {
   return (
@@ -11,7 +10,6 @@ function App() {
       <Navbar />
       <Slider />
       <Drinks />
-      <Foods />
       <Footer></Footer>
     </div>
   );
