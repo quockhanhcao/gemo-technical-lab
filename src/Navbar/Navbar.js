@@ -1,5 +1,5 @@
-import logo from "./logo.png";
-import shopName from "./shop-name.png";
+import logo from "../assets/logo/logo.png";
+import shopName from "../assets/logo/shop-name.png";
 import { useTranslation } from "react-i18next";
 
 const Navbar = () => {

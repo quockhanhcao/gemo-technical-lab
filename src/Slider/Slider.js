@@ -1,4 +1,4 @@
-import slider from './slider.png';
+import slider from '../assets/background/slider.png';
 
 const Slider = () => {
     return ( 

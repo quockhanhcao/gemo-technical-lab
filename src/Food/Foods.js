@@ -1,6 +1,6 @@
-import sandwich from "./sandwich.jpg";
-import bagel from "./bagels.jpg";
-import star from "./star.png";
+import sandwich from "../assets/food/sandwich.jpg";
+import bagel from "../assets/food/bagels.jpg";
+import star from "../assets/utility/star.png";
 import { useTranslation } from "react-i18next";
 
 const Foods = () => {
@@ -11,7 +11,6 @@ const Foods = () => {
       <h3>{t("Breakfast")}</h3>
       <div className="grid-container-food">
         <div>
-          <a href="/">
             <img src={sandwich} alt="sandwich" />
             <div className="food-info">
               <h3>{t("Sandwich")}</h3>
@@ -36,11 +35,9 @@ const Foods = () => {
               </div>
             </div>
             <button className="add-to-cart">{t("AddToCart")}</button>
-          </a>
         </div>
 
         <div>
-          <a href="/">
             <img src={bagel} alt="bagel" />
             <div className="food-info">
               <h3>{t("Bagel")}</h3>
@@ -65,7 +62,6 @@ const Foods = () => {
               </div>
             </div>
             <button className="add-to-cart">{t("AddToCart")}</button>
-          </a>
         </div>
       </div>
     </div>
